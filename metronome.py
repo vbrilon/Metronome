@@ -18,6 +18,10 @@ def start_tick(minbpm, maxbpm, beats, seconds):
 	sys.stdout.flush()
 	time.sleep(seconds)
 	while count < beats:
+		for event in pygame.event.get():
+			if event.key == pygame.K_q:
+				print
+				sys.exit()
 		tick_sound.play()
 		sys.stdout.write(". ")
 		sys.stdout.flush()
@@ -33,8 +37,9 @@ def main(argv):
 		return -1   
 	minbpm = float(argv[1])  
 	maxbpm = float(argv[2])  
-	beats = float(argv[3])
-	seconds = float(argv[4])
+	beats = int(argv[3])
+	seconds = int(argv[4])
+	print "Press 'q' to quit"
 	start_tick(minbpm, maxbpm, beats, seconds)  
    
 if __name__ == '__main__':  
