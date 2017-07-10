@@ -2,7 +2,7 @@
 """
 Usage: %(scriptName)s min_bpm, max_bpm, number of clicks to loop on a given bpm, seconds to wait before starting next loop
 Example: %(scriptName)s 100 120 4 5
-This will generate a random bpm between 100 and 120 and repeat it for 4 clicks before moving to a new value after 5 seconds
+This will generate a random bpm between 100 and 120 and repeat it for 4 clicks before moving to a new value 5 seconds after the last click is finished
 """
 
 import sys  
